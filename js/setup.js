@@ -39,7 +39,7 @@ function setup() {
     //     scene.background = texture;
     // });
 
-    textureLoader.load('images/LINE.jpg', (texture) => {
+    textureLoader.load('images/line.jpg', (texture) => {
         scene.background = texture;
     });
 
