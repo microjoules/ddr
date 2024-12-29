@@ -1,0 +1,124 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>ddr game</title>
+  <style>
+    body {
+      /* Remove the default padding and margin around the canvas */
+      padding: 0;
+      margin: 0;
+      /* Disable scrolling */
+      overflow: hidden;
+    }
+
+    #gameCanvas { position: absolute; top: 0; left: 0; }
+    #stationaryImage {
+      position: absolute;
+      top: 10px; /* Adjust as needed */
+      left: 10px; /* Adjust as needed */
+      width: 500px; /* Adjust as needed */
+    }
+
+    #perfectMessage {
+      position: absolute;
+      top: 250px;
+      left: 250px;
+      transform: translateX(-50%);
+      font-size: 48px;
+      font-weight: bold;
+      color: rgb(234, 230, 19);
+      text-shadow: 2px 2px 0 #414104, -2px -2px 0 #414104, 2px -2px 0 #414104, -2px 2px 0 #414104,
+                   3px 3px 5px rgba(0, 0, 0, 0.3);
+      font-family: 'Anton', sans-serif;
+      display: none;
+    }
+
+    #greatMessage {
+      position: absolute;
+      top: 250px;
+      left: 250px;
+      transform: translateX(-50%);
+      font-size: 48px;
+      font-weight: bold;
+      color: rgb(0, 198, 242);
+      text-shadow: 2px 2px 0 #414104, -2px -2px 0 #414104, 2px -2px 0 #414104, -2px 2px 0 #414104,
+                   3px 3px 5px rgba(0, 0, 0, 0.3);
+      font-family: 'Anton', sans-serif;
+      display: none;
+    }
+
+    #missMessage {
+      position: absolute;
+      top: 250px;
+      left: 250px;
+      transform: translateX(-50%);
+      font-size: 48px;
+      font-weight: bold;
+      color: rgb(0, 228, 76);
+      text-shadow: 2px 2px 0 #414104, -2px -2px 0 #414104, 2px -2px 0 #414104, -2px 2px 0 #414104,
+                   3px 3px 5px rgba(0, 0, 0, 0.3);
+      font-family: 'Anton', sans-serif;
+      display: none;
+    }
+
+    #loseMessage {
+      position: absolute;
+      top: 250px;
+      left: 250px;
+      transform: translateX(-50%);
+      font-size: 65px;
+      font-weight: bold;
+      color: rgb(208, 4, 4);
+      text-shadow: 2px 2px 0 #414104, -2px -2px 0 #414104, 2px -2px 0 #414104, -2px 2px 0 #414104,
+                   3px 3px 5px rgba(0, 0, 0, 0.3);
+      font-family: 'Anton', sans-serif;
+      display: none;
+    }
+
+    #startMessage {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  padding: 10px;
+  display: none; /* initially hidden */
+}
+
+
+  </style>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<body>
+
+  <img id="stationaryImage" src="images/white-outline.png" alt="Stationary Image">
+  <canvas id="gameCanvas"></canvas>
+
+  <div id="perfectMessage">PERFECT!</div>
+  <div id="greatMessage">GREAT</div>
+  <div id="missMessage">MISS</div>
+  <div id="loseMessage">YOU LOST!</div>
+  <div id="startMessage">Press Space Bar to Begin</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+
+  <canvas id="webglcanvas"></canvas>
+  <script src="js/WebGL.js"></script>
+  <script type="module" src="js/three.module.js"></script>
+  <script type="module" src="js/setup.js"></script>
+  <script type="module" src="js/OBJLoader.js"></script>
+  <script type="module" src="js/SourceLoader.js"></script>
+  <script type="module" src="js/OrbitControls.js"></script>
+  <script type="module" src="js/BufferGeometryUtils.js"></script>
+  <script type="module" src="js/GLTFLoader.js"></script>
+  <script type="module" src="js/KeyboardState.js"></script> <!-- By Jerome Etienne: http://jetienne.com/ -->
+  <script type="module" src="ddr.js"></script>
+</body>
+
+</html>
