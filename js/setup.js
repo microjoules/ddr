@@ -1,7 +1,3 @@
-/**
- * UBC CPSC 314 2023W2
- * Assignments Template setup
- */
 
 /**
  * Creates a basic scene and returns necessary objects
@@ -35,13 +31,12 @@ function setup() {
 
     // Load background image
     const textureLoader = new THREE.TextureLoader();
-    // textureLoader.load('images/comic1.jpg', (texture) => {
+    const backgroundtexture = textureLoader.load('images/line.jpg');
+    scene.background = backgroundtexture;
+
+    // textureLoader.load('images/line.jpg', (texture) => {
     //     scene.background = texture;
     // });
-
-    textureLoader.load('images/line.jpg', (texture) => {
-        scene.background = texture;
-    });
 
 //     // Create a new WebGL renderer with the canvas and context.
 // const renderer = new THREE.WebGLRenderer({ canvas, context, antialias: true });
